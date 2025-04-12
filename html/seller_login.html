@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../scripts/index.css">
+</head>
+<body>
+    <h1 id="heading">Seller Sign-In/Up</h1>
+    <section class="signInPages">
+        <p>First time signing up, or returning?</p>
+        <p>
+            <button id="signInButton">
+                Sign-in/Register
+            </button>
+        </p>
+    </section>
+
+    <script type="module">
+        import { userSignIn } from '../scripts/auth.js';
+        document.getElementById("signInButton").addEventListener('click', () => {
+            userSignIn("seller");
+        });
+    </script>
+</body>
+</html>
